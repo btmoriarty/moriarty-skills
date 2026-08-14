@@ -3,7 +3,7 @@
   "name": "moriarty-skills",
   "owner": { "name": "Brian Moriarty", "email": "btmoriarty@gmail.com" },
   "metadata": {
-    "description": "Brian Moriarty's Claude skills: a job-search assistant, a voice validator, and a code-review control plane."
+    "description": "Brian Moriarty's Claude skills: a job-search assistant, a voice validator, a code-review control plane, and a memory-seeded worldbuilding engine."
   },
   "plugins": [
     {
@@ -32,6 +32,15 @@
       "author": { "name": "Brian Moriarty", "email": "btmoriarty@gmail.com" },
       "category": "development",
       "tags": ["code-review", "governance", "claude-code"]
+    },
+    {
+      "name": "worldbuild",
+      "description": "Build a fictional universe on disk that is seeded from your own memory, then masked and transposed into myth. Includes a memory-interrogation protocol, a registry for questions the world must never answer, and a lineage check that every entry traces back to something a human supplied.",
+      "source": { "source": "github", "repo": "btmoriarty/worldbuild", "ref": "main" },
+      "version": "0.1.0",
+      "author": { "name": "Brian Moriarty", "email": "btmoriarty@gmail.com" },
+      "category": "writing",
+      "tags": ["worldbuilding", "fiction", "writing", "memory"]
     }
   ]
 }

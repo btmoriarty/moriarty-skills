@@ -1,0 +1,20 @@
+/* HOSL design tokens. Poster-derived house default (2026-08-01): navy and cream
+   base, warm accents where they carry meaning, Atkinson body, IBM Plex Mono
+   labels. Grounded in the TAIS poster "Oversight That Degrades". */
+:root{
+  --cream:#FDF8F0;    /* background and paper */
+  --navy:#1a2744;     /* primary ink, structure, the top and bottom bars */
+  --blue:#3a6ea8;     /* connectors, joins, a second track; sparingly */
+  --amber:#e8a020;    /* the warm accent: a gate, a rule, an eyebrow */
+  --orange:#d9531f;   /* the critical or degraded: the one line that must land */
+  --green:#3a7d44;    /* verified, passed, confirmed; sparingly */
+  --red:#c0392b;      /* hard problems, warnings, the unresolved; sparingly */
+
+  --ink-muted:rgba(26,39,68,.66);
+  --hairline:#d7ceb7; /* warm rule on cream */
+  --wash:#f1ead9;     /* faint fill for code and callouts */
+
+  --font-body:"Atkinson Hyperlegible", system-ui, sans-serif;   /* body and labels; accessible default */
+  --font-mono:"IBM Plex Mono", ui-monospace, monospace;         /* eyebrows, codes, technical labels */
+  --font-display:"Archivo", "Helvetica Neue", "Atkinson Hyperlegible", system-ui, sans-serif; /* bold grotesque webfont, titles only */
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HOSL cheat-sheet template</title>
+<!--
+  House cheat-sheet / dense one-pager template (HOSL default, 2026-08-01).
+  Navy masthead with an amber rule, cream body, navy footer. Atkinson Hyperlegible
+  body, IBM Plex Mono eyebrows and code, bold grotesque title. Palette from
+  tokens.css. To make a sheet: change the masthead text, fill <section> blocks
+  (a mono <h2> eyebrow, then .cmd lines and .g glosses), and edit the footer.
+  Letter landscape; render and check it fills the page.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FDF8F0; --navy:#1a2744; --blue:#3a6ea8; --amber:#e8a020; --orange:#d9531f;
+    --green:#3a7d44; --red:#c0392b; --ink:#1a2744; --mut:#5b5b55; --line:#d7ceb7; --wash:#f1ead9;
+  }
+  @page { size: Letter landscape; margin: 0.32in; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; background:var(--cream); color:var(--ink); }
+  body{ font-family:"Atkinson Hyperlegible", system-ui, sans-serif; font-size:8.4pt; line-height:1.34; }
+
+  .masthead{ background:var(--navy); color:#fff; border-bottom:4px solid var(--amber);
+    padding:11px 16px 12px; display:flex; justify-content:space-between; align-items:flex-end; gap:22px; }
+  .eyebrow{ font-family:"IBM Plex Mono", monospace; font-size:7.6pt; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--amber); margin:0 0 5px; font-weight:500; }
+  h1{ font-family:"Archivo","Helvetica Neue","Atkinson Hyperlegible",system-ui,sans-serif; font-weight:800;
+    font-size:30pt; line-height:.95; letter-spacing:-.02em; margin:0; color:#fff; }
+  h1 .sub{ display:block; font-family:"Atkinson Hyperlegible",sans-serif; font-weight:400; font-size:11pt;
+    letter-spacing:0; color:var(--amber); margin-top:4px; }
+  .meta{ font-family:"IBM Plex Mono", monospace; font-size:7.6pt; color:rgba(255,255,255,.82);
+    text-align:right; white-space:nowrap; line-height:1.7; text-transform:uppercase; letter-spacing:.08em; }
+
+  .wrap{ padding:11px 4px 0; }
+  .cols{ column-count:3; column-gap:16px; }
+  section{ break-inside:avoid; margin:0 0 11px; }
+  h2{ font-family:"IBM Plex Mono", monospace; font-weight:600; font-size:8pt; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--navy); margin:0 0 5px; padding-bottom:3px;
+    border-bottom:1.5px solid var(--navy); }
+  .cmd{ font-family:"IBM Plex Mono", monospace; font-size:7.7pt; color:var(--navy); background:var(--wash);
+    border-left:2px solid var(--amber); padding:2px 5px; border-radius:1px; display:block; margin:0 0 3px;
+    word-break:break-word; }
+  .g{ color:var(--mut); font-size:8.3pt; margin:0; }
+  .g b{ color:var(--navy); font-weight:700; }
+
+  table.k{ width:100%; border-collapse:collapse; font-size:8.2pt; margin-top:1px; }
+  table.k td{ padding:2px 3px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.k tr:last-child td{ border-bottom:none; }
+  table.k td.t{ font-family:"IBM Plex Mono", monospace; white-space:nowrap; font-weight:500; }  /* color inherits navy; keeps semantic classes (.ok/.crit) from being overridden */
+  .ok{ color:var(--green); font-weight:700; }
+  .crit{ color:var(--orange); font-weight:700; }
+  .note{ border:1px solid var(--line); border-radius:2px; padding:4px 6px; margin-top:4px; font-size:7.9pt; color:var(--mut); }
+
+  .foot{ margin-top:8px; background:var(--navy); color:#fff; border-top:4px solid var(--amber);
+    padding:9px 16px; display:flex; justify-content:space-between; gap:22px; align-items:center; }
+  .foot .rule{ font-size:8.6pt; max-width:56ch; color:rgba(255,255,255,.92); }
+  .foot .rule .o{ color:var(--orange); font-weight:700; }
+  .foot .note2{ font-family:"IBM Plex Mono", monospace; font-size:7.4pt; color:rgba(255,255,255,.7);
+    text-align:right; white-space:nowrap; line-height:1.7; text-transform:uppercase; letter-spacing:.06em; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div>
+    <p class="eyebrow">Eyebrow &#183; cheat sheet</p>
+    <h1>Tool name<span class="sub">One line on what it is and the one honest claim.</span></h1>
+  </div>
+  <div class="meta">line one<br>line two<br>version<br>runtime</div>
+</div>
+
+<div class="wrap">
+<div class="cols">
+
+  <section>
+    <h2>Section eyebrow</h2>
+    <span class="cmd">command --flag value</span>
+    <p class="g">One line on what the command does and <b>what you get</b>. Keep it to a sentence or two.</p>
+  </section>
+
+  <section>
+    <h2>A table section</h2>
+    <table class="k">
+      <tr><td class="t">key</td><td class="g">its meaning</td></tr>
+      <tr><td class="t">another</td><td class="g">its meaning</td></tr>
+      <tr><td class="t ok">good</td><td class="g">green marks the confirmed end</td></tr>
+    </table>
+    <div class="note">A short framing line. Use the note box for the rule under a table.</div>
+  </section>
+
+  <section>
+    <h2>Another section</h2>
+    <span class="cmd">second command</span>
+    <span class="cmd">a variant</span>
+    <p class="g">Two commands stack; the gloss follows. Add as many sections as fill three balanced columns.</p>
+  </section>
+
+</div>
+</div>
+
+<div class="foot">
+  <div class="rule">A short standing statement. <span class="o">The one line that must land goes in orange.</span></div>
+  <div class="note2">a footer note<br>in mono, right aligned<br>three lines fits</div>
+</div>
+
+</body>
+</html>

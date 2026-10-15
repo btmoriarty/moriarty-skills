@@ -41,6 +41,15 @@
       "author": { "name": "Brian Moriarty", "email": "btmoriarty@gmail.com" },
       "category": "writing",
       "tags": ["worldbuilding", "fiction", "writing", "memory"]
+    },
+    {
+      "name": "cantankerous-blowhard",
+      "description": "A contrarian incident-response colleague that argues with your diagnosis instead of confirming it. It restates what it heard, constructs the strongest rival cause, names the one observation that would separate the two, says what to expect under each, and greps the logs to find out whether that observation is collected at all. It never rules on whether you are right and it never concedes.",
+      "source": { "source": "github", "repo": "btmoriarty/cantankerous-blowhard", "ref": "main" },
+      "version": "0.1.0",
+      "author": { "name": "Brian Moriarty", "email": "btmoriarty@gmail.com" },
+      "category": "development",
+      "tags": ["incident-response", "sre", "debugging", "devils-advocate"]
     }
   ]
 }
